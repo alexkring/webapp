@@ -11,4 +11,8 @@ public class AppController {
 		return "Greetings from Spring Boot!";
 	}
 
+	@GetMapping("/model")
+    public String getModel() {
+        return "Called /model endpoint!";
+    }
 }
