@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.alexkring.webapp;
 
 import java.util.Arrays;
 
