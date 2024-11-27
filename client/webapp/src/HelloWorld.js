@@ -26,7 +26,7 @@ function HelloWorldPage({isActive}) {
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
       </div>
       <h1>Hello, World!</h1>
-      <div></div>
+      <div>Hello, World!</div>
     </div>
   );
 }

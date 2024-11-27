@@ -7,29 +7,12 @@ import PageIndex from './PageIndex.js';
 import HelloWorldPage from "./HelloWorld";
 
 function App() {
-
-  const [pageIndex, setPageIndex] = useState(PageIndex.HelloWorld);
-  const [userContext, setUserContext] = useState(null);
-
-  const handleChangePage = (pageIndex) => {
-    setPageIndex(pageIndex);
-  };
-
-  const handleChangeUserContext = (user) => {
-    setUserContext(user);
-  };
-
+  //const [pageIndex, setPageIndex] = useState(PageIndex.HelloWorld);
   return (
       <div className="App">
         <header className="App-header">
         </header>
-        <HelloWorldPage isActive={pageIndex === PageIndex.ListPage}></HelloWorldPage>
-        <ListPage isActive={pageIndex === PageIndex.ListPage} onChangePage={handleChangePage} onChangeUserContext={handleChangeUserContext}>
-        </ListPage>
-        <AddPage isActive={pageIndex === PageIndex.AddPage} onChangePage={handleChangePage}>
-        </AddPage>
-        <EditPage isActive={pageIndex === PageIndex.EditPage} onChangePage={handleChangePage} user={userContext}>
-        </EditPage>
+        <HelloWorldPage isActive={true}></HelloWorldPage>
         <footer className="App-footer">
         </footer>
       </div>
