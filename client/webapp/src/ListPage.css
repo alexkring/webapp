@@ -1,0 +1,25 @@
+.ListPage {
+  text-align: center;
+}
+
+.ListPage-add-user-icon {
+  height: 5vmin;
+  width: 5vmin;
+}
+
+.ListPage-user {
+  display:  flex;
+}
+
+.ListPage-user-icon-image {
+  height: 5vmin;
+  width: 5vmin;
+}
+
+.ListPage-user-info {
+  text-align: left;
+}
+
+.ListPage-user-footer {
+  min-height: 12vh;
+}
