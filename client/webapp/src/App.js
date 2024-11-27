@@ -4,10 +4,11 @@ import ListPage from './ListPage.js';
 import AddPage from './AddPage.js';
 import EditPage from './EditPage.js';
 import PageIndex from './PageIndex.js';
+import HelloWorldPage from "./HelloWorld";
 
 function App() {
 
-  const [pageIndex, setPageIndex] = useState(PageIndex.ListPage);
+  const [pageIndex, setPageIndex] = useState(PageIndex.HelloWorld);
   const [userContext, setUserContext] = useState(null);
 
   const handleChangePage = (pageIndex) => {
@@ -22,6 +23,7 @@ function App() {
       <div className="App">
         <header className="App-header">
         </header>
+        <HelloWorldPage isActive={pageIndex === PageIndex.ListPage}></HelloWorldPage>
         <ListPage isActive={pageIndex === PageIndex.ListPage} onChangePage={handleChangePage} onChangeUserContext={handleChangeUserContext}>
         </ListPage>
         <AddPage isActive={pageIndex === PageIndex.AddPage} onChangePage={handleChangePage}>

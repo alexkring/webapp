@@ -8,17 +8,7 @@ public class AppController {
 
 	@GetMapping("/")
 	public String index() {
-		return "Greetings from Spring Boot!";
-	}
-
-	@GetMapping("/model")
-    public String getModel() {
-        return "Called /model endpoint!";
-    }
-
-	@GetMapping("/api/user/")
-	public String getUser() {
-		return "Called get /api/user endpoint!";
+		return "Welcome to the index page!";
 	}
 
 	@GetMapping("/api/users/")
@@ -40,5 +30,10 @@ public class AppController {
 		// Process the user data and save it to the database
 		// ...
 		return user;
+	}
+
+	@GetMapping("/api/hello_world/")
+	public String getHelloWorld() {
+		return "Hello, World!";
 	}
 }

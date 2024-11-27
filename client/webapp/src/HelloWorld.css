@@ -1,0 +1,25 @@
+.HelloWorldPage {
+  text-align: center;
+}
+
+.HelloWorldPage-add-user-icon {
+  height: 5vmin;
+  width: 5vmin;
+}
+
+.HelloWorldPage-user {
+  display:  flex;
+}
+
+.HelloWorldPage-user-icon-image {
+  height: 5vmin;
+  width: 5vmin;
+}
+
+.HelloWorldPage-user-info {
+  text-align: left;
+}
+
+.HelloWorldPage-user-footer {
+  min-height: 12vh;
+}
