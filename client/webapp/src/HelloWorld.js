@@ -6,16 +6,19 @@ import PageIndex from './PageIndex.js';
 import './HelloWorld.css';
 
 function HelloWorldPage({isActive}) {
-
+  var initialApiResponse = "None";
+  var [apiResponse, setApiResponse] = useState(initialApiResponse);
   useEffect(() => {
     axios.get('http://localhost:8080/api/hello_world/')
       .then(response => {
-        console.log("response: ", JSON.stringify(response.data));
+        apiResponse = JSON.stringify(response.data);
+        setApiResponse(apiResponse);
+        console.log("response: ", apiResponse);
       })
       .catch(error => {
         console.log(error);
       });
-  }, [isActive]);
+  }, [isActive, apiResponse]);
 
   if (!isActive) {
     return (<div/>);
@@ -26,7 +29,7 @@ function HelloWorldPage({isActive}) {
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
       </div>
       <h1>Hello, World!</h1>
-      <div>Hello, World!</div>
+      <div>{apiResponse}</div>
     </div>
   );
 }
