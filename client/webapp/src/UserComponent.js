@@ -134,7 +134,7 @@ function RightButton({onCreateClick, onUpdateClick, enableUpdate}) {
 }
 
 function updateUser(user) {
-  const url = `http://localhost:8000/api/users/${user.id}/`;
+  const url = `http://localhost:8080/api/users/${user.id}/`;
   return axios
     .patch(url, user)
     .then((response) => {
@@ -147,7 +147,7 @@ function updateUser(user) {
 
 function createUser(user) {
   return axios
-    .post('http://localhost:8000/api/user/', {
+    .post('http://localhost:8080/api/user/', {
       user_object: user
     })
     .then((response) => {
@@ -156,11 +156,14 @@ function createUser(user) {
       console.log("status: " + response.data.status);
       let statusCode = parseInt(response.data.status);
       return statusCode;
-    });
+    })
+    .catch(error => {
+        console.log(error);
+     });
 }
 
 function deleteUser(id) {
-  const url = `http://localhost:8000/api/users/${id}`;
+  const url = `http://localhost:8080/api/users/${id}`;
   return axios
     .delete(url)
     .then((response) => {

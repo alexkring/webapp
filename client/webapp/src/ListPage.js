@@ -9,7 +9,7 @@ function ListPage({isActive, onChangePage, onChangeUserContext}) {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/users/')
+    axios.get('http://localhost:8080/api/users/')
       .then(response => {
         console.log("response: ", JSON.stringify(response.data));
         setUsers(response.data);
